@@ -1,3 +1,4 @@
+import Layout from "@/components/Layout"
 import Navbar from "@/components/Navbar"
 
 function News() {
@@ -7,7 +8,7 @@ function News() {
             <Navbar />
         </div>
         <div className="allnews w-full h-fit">
-            
+            <Layout />
         </div>
     </div>
   )
