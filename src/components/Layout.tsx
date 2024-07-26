@@ -1,8 +1,9 @@
+import Newscomponent from "./Newscomponent"
 
 function Layout() {
   return (
     <div className=" w-full h-fit">
-        <div className="sectionheading w-full h-80 ">
+        <div className="sectionheading w-full h-fit ">
             <p className=" text-2xl px-3 py-1 underline w-full text-white">Topic news</p>
             <div className=" w-full h-fit flex flex-wrap justify-center items-center">
                 <div className="image w-80 h-64 bg-cyan-600 my-2 ml-3 rounded-md"></div>
@@ -21,7 +22,12 @@ function Layout() {
             </div>
         </div>
 
-        
+        <div className="extranews w-full h-fit px-3 py-2 bg-gray-500 flex gap-4 flex-wrap justify-center items-center">
+          <Newscomponent />
+          <Newscomponent />
+          <Newscomponent />
+          
+        </div>
     </div>
   )
 }
