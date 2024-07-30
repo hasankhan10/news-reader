@@ -1,5 +1,11 @@
+
+import { useState } from "react";
 import { IoIosSearch } from "react-icons/io";
+import Profile from "./Profile";
 function Navbar() {
+  const [profile,setProfile] = useState<boolean>(false)
+  console.log(profile);
+  
   return (
     <div className="navbar w-full h-full flex flex-col sm:flex-row">
         <div className="logo sm:h-full h-16 sm:w-1/5 w-full flex justify-center items-center">
@@ -15,7 +21,14 @@ function Navbar() {
         <div className="search sm:h-full h-16 sm:w-[30%] w-full flex justify-center items-center gap-2 py-2 sm:py-0">
             <input className=" w-4/5 h-10 text-center rounded-md" placeholder="Search Anything!" type="text" />
             <IoIosSearch className=" w-6 h-6 cursor-pointer" />
+            <div onClick={()=>setProfile(!profile)} className="profile h-10 w-10 bg-red-500 rounded-full cursor-pointer">
+              {/* profile photo will come. */}
+            </div>
+            {
+              profile?<Profile />:null
+            }
         </div>
+        
     </div>
   )
 }

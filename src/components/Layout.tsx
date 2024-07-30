@@ -22,7 +22,7 @@ function Layout() {
             </div>
         </div>
 
-        <div className="extranews w-full h-fit px-3 py-2 bg-gray-500 flex gap-4 flex-wrap justify-center items-center">
+        <div className="extranews w-full h-fit px-3 py-2 flex gap-4 flex-wrap justify-center items-center">
           <Newscomponent />
           <Newscomponent />
           <Newscomponent />
