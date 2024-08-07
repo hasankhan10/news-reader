@@ -1,26 +1,36 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 
 import { useState } from "react";
 import { IoIosSearch } from "react-icons/io";
 import Profile from "./Profile";
+import { NavLink } from "react-router-dom";
 function Navbar() {
   const [profile,setProfile] = useState<boolean>(false)
-  console.log(profile);
-  
+  const [value,setValue] = useState<string>()
+
+  const handleValue = (e: React.ChangeEvent<HTMLInputElement>)=>{
+    setValue(e.target.value) 
+  }
+  const handleSearch = ()=>{
+    
+  }
   return (
     <div className="navbar w-full h-full flex flex-col sm:flex-row">
         <div className="logo sm:h-full h-16 sm:w-1/5 w-full flex justify-center items-center">
             <h1 className=" sm:text-4xl text-2xl font-serif">News Reader</h1>
         </div>
         <div className="tags sm:h-full h-auto w-full sm:w-3/6 flex flex-wrap justify-center items-center sm:space-x-16 space-x-7 sm:text-xl text-sm py-2 sm:py-0 font-mono">
-            <a href="">Trending</a>
-            <a href="">Cricket</a>
-            <a href="">Football</a>
-            <a href="">Politics</a>
-            <a href="">Tech</a>
+            <a href="" className=" hover:scale-105 hover:font-bold">Trending</a>
+            <a href="" className=" hover:scale-105 hover:font-bold">Cricket</a>
+            <a href="" className=" hover:scale-105 hover:font-bold">Football</a>
+            <a href="" className=" hover:scale-105 hover:font-bold">Politics</a>
+            <a href="" className=" hover:scale-105 hover:font-bold">Tech</a>
         </div>
         <div className="search sm:h-full h-16 sm:w-[30%] w-full flex justify-center items-center gap-2 py-2 sm:py-0">
-            <input className=" w-4/5 h-10 text-center rounded-md" placeholder="Search Anything!" type="text" />
-            <IoIosSearch className=" w-6 h-6 cursor-pointer" />
+
+            <input className=" w-4/5 h-10 text-center rounded-md" placeholder="Search Anything!" type="text" onChange={(e)=>handleValue(e)} />
+
+            <IoIosSearch onClick={handleSearch} className=" w-6 h-6 cursor-pointer" />
             <div onClick={()=>setProfile(!profile)} className="profile h-10 w-10 bg-red-500 rounded-full cursor-pointer">
               {/* profile photo will come. */}
             </div>
