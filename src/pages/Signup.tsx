@@ -1,7 +1,7 @@
 
 function Signup() {
   return (
-    <div className="signup w-full h-screen flex justify-center items-center bg-gray-600">
+    <div className="signup w-full h-fit py-10 flex justify-center items-center">
         <div className=" w-[350px] h-[400px] bg-gray-100 rounded-md">
             <div className="upper w-full h-1/4 flex justify-center items-center gap-2 flex-col">
                 <h1 className=" text-3xl font-semibold">Create your Account</h1>

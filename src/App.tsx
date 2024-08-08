@@ -8,6 +8,7 @@ import Football from "./pages/Football"
 import Politics from "./pages/Politics"
 import Tech from "./pages/Tech"
 import Trending from "./pages/Trending"
+import Search from "./pages/Search"
 const router = createBrowserRouter([
   {
     path:"/",
@@ -40,6 +41,10 @@ const router = createBrowserRouter([
   {
     path:"/trending",
     element:<Trending />
+  },
+  {
+    path:"/:search",
+    element:<Search />
   }
 ])
 

@@ -1,9 +1,8 @@
-/* eslint-disable @typescript-eslint/no-unused-vars */
 
+import { NavLink } from "react-router-dom";
 import { useState } from "react";
 import { IoIosSearch } from "react-icons/io";
 import Profile from "./Profile";
-import { NavLink } from "react-router-dom";
 function Navbar() {
   const [profile,setProfile] = useState<boolean>(false)
   const [value,setValue] = useState<string>()
@@ -17,14 +16,10 @@ function Navbar() {
   return (
     <div className="navbar w-full h-full flex flex-col sm:flex-row">
         <div className="logo sm:h-full h-16 sm:w-1/5 w-full flex justify-center items-center">
-            <h1 className=" sm:text-4xl text-2xl font-serif">News Reader</h1>
+            <a href="/"><h1 className=" sm:text-4xl text-2xl font-serif"><span className=" opacity-70">News</span> Reader</h1></a>
         </div>
         <div className="tags sm:h-full h-auto w-full sm:w-3/6 flex flex-wrap justify-center items-center sm:space-x-16 space-x-7 sm:text-xl text-sm py-2 sm:py-0 font-mono">
-            <a href="" className=" hover:scale-105 hover:font-bold">Trending</a>
-            <a href="" className=" hover:scale-105 hover:font-bold">Cricket</a>
-            <a href="" className=" hover:scale-105 hover:font-bold">Football</a>
-            <a href="" className=" hover:scale-105 hover:font-bold">Politics</a>
-            <a href="" className=" hover:scale-105 hover:font-bold">Tech</a>
+            {/* <NavLink to={"/trending"}>Trending</NavLink> */}
         </div>
         <div className="search sm:h-full h-16 sm:w-[30%] w-full flex justify-center items-center gap-2 py-2 sm:py-0">
 

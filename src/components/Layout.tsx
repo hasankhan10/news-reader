@@ -1,10 +1,10 @@
 import Newscomponent from "./Newscomponent"
 
-function Layout() {
+function Layout({name}) {
   return (
     <div className=" w-full h-fit">
         <div className="sectionheading w-full h-fit ">
-            <p className=" text-2xl px-3 py-1 underline w-full text-white">Topic news</p>
+            <p className=" text-2xl px-3 py-1 underline w-full text-white">{name}</p>
             <div className=" w-full h-fit flex flex-wrap justify-center items-center">
                 <div className="image w-80 h-64 bg-cyan-600 my-2 ml-3 rounded-md"></div>
                 <div className="describtion ">

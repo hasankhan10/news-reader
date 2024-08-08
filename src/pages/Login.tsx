@@ -1,7 +1,7 @@
 
 function Login() {
   return (
-    <div className="login w-full h-screen flex justify-center items-center bg-gray-600">
+    <div className="login w-full h-fit py-10 flex justify-center items-center">
         <div className=" w-[350px] h-[400px] bg-gray-100 rounded-md flex flex-col gap-4">
             <div className="upper w-full h-1/4 flex justify-center items-center gap-1 flex-col mt-4">
                 <h1 className=" text-3xl font-semibold">Welcome back</h1>
