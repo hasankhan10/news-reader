@@ -1,6 +1,5 @@
 import {createBrowserRouter,RouterProvider} from "react-router-dom"
 import News from "./pages/News"
-import Navbar from "./components/Navbar"
 import Signup from "./pages/Signup"
 import Login from "./pages/Login"
 import Cricket from "./pages/Cricket"
@@ -15,31 +14,31 @@ const router = createBrowserRouter([
     element:<News />
   },
   {
-    path:"/login",
+    path:"login",
     element:<Login />
   },
   {
-    path:"/signup",
+    path:"signup",
     element:<Signup />
   },
   {
-    path:"/cricket",
+    path:"cricket",
     element:<Cricket />
   },
   {
-    path:"/football",
+    path:"football",
     element:<Football />
   },
   {
-    path:"/politics",
+    path:"politics",
     element:<Politics />
   },
   {
-    path:"/tech",
+    path:"tech",
     element:<Tech />
   },
   {
-    path:"/trending",
+    path:"trending",
     element:<Trending />
   },
   {
@@ -52,9 +51,6 @@ function App() {
 
   return (
     <div className="main w-full h-screen bg-slate-800 overflow-auto">
-      <div className="navbarbox w-screen h-auto py-2 px-2 bg-slate-300 sticky top-0 z-10">
-        <Navbar />
-      </div>
       <RouterProvider router={router} />
     </div>
   )

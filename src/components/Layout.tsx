@@ -1,8 +1,11 @@
 import Newscomponent from "./Newscomponent"
-
+import Navbar from "./Navbar"
 function Layout({name}) {
   return (
     <div className=" w-full h-fit">
+        <div className="navbarbox w-screen h-auto py-2 px-2 bg-slate-300 sticky top-0 z-10">
+          <Navbar />
+        </div>
         <div className="sectionheading w-full h-fit ">
             <p className=" text-2xl px-3 py-1 underline w-full text-white">{name}</p>
             <div className=" w-full h-fit flex flex-wrap justify-center items-center">
